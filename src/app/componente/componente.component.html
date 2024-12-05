@@ -1,0 +1,20 @@
+<h1>DETALLE DEL CLIENTE SELECCIONADO</h1>
+
+<form action="#" target="" method="get" name = "formDatosPersonales">
+  <label for="id">ID</label>
+  <input type="text" name="id" id="id" [(ngmodel)]="cliente.id" placeholder="id">
+
+  <label for="nombre">Nombre</label>
+  <input type="text" name="nombre" id="nombre" [(ngmodel)]="cliente.nombre" placeholder="nombre">
+
+  <label for="id">Apellido</label>
+  <input type="text" name="apellido" id="apellido" [(ngmodel)]="cliente.apellido" placeholder="apellido">
+
+  <label for="id">Edad</label>
+  <input type="text" name="edad" id="edad" [(ngmodel)]="cliente.edad" placeholder="edad">
+
+  <label for="id">Cantidad</label>
+  <input type="text" name="cantidad" id="cantidad" [(ngmodel)]="cliente.cantidad" placeholder="cantidad">
+
+  <input type="text" name="enviar" value="Enviar datos" (click)=modificarCliente()/>
+</form>

@@ -1,0 +1,28 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NOMBRE</th>
+        <th>APELLIDO</th>
+        <th>EDAD</th>
+        <th>CANTIDAD</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let cliente of clientes; let i = index">
+        <td>{{cliente.id}}</td>
+        <td>{{cliente.nombre}}</td>
+        <td>{{cliente.apellido}}</td>
+        <td>{{cliente.edad}}</td>
+        <td>{{cliente.cantidad}}</td>
+
+        <td><button (click)="sacarDatos(i)">Detalles</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-componente [posicion]="i" (editar)="modificarCliente($event)"></app-componente>
